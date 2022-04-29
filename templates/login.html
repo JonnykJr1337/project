@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form method="post" class="align-items-center">
+  <input type="text" name="login" placeholder="логин"><br>
+  <input type="password" name="password" placeholder="пароль"><br>
+  <label for="remember">Запомнить меня</label>
+  <input type="checkbox" class="" name="remember" id="remember"><br>
+  <input type="submit" value="Войти" class="btn btn-outline-success"><br>
+</form>
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+{% endblock %}

@@ -11,7 +11,7 @@ class Code(SqlAlchemyBase):
     name = Column(String)
     key = Column(String, unique=True)
     code = Column(String)
-    user_id = Column(Integer, ForeignKey("users_id"))
+    user_id = Column(Integer, ForeignKey("users.id"))
     user = orm.relation("User")
     created_date = Column(DateTime, default=datetime.datetime.now())
     visible = Column(Boolean, default=True)  # True if public, False if private
